@@ -21,7 +21,7 @@ const Review = () => {
         const feedbackInfo = {
             ...feedback
         }
-        fetch('http://localhost:5000/addfeedback', {
+        fetch('https://powerful-plateau-32116.herokuapp.com/addfeedback', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

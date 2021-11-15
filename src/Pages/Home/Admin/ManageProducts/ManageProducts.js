@@ -6,7 +6,7 @@ const ManageProducts = () => {
     const [manageAllServices, setManageAllServices
     ] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/allproducts')
+        fetch('https://powerful-plateau-32116.herokuapp.com/allproducts')
             .then(res => res.json())
             .then(data => {
                 setManageAllServices(data);
@@ -15,7 +15,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are You Sure You Want to delete');
         if (proceed) {
-            const url = `http://localhost:5000/manageallservices/${id}`;
+            const url = `https://powerful-plateau-32116.herokuapp.com/manageallservices/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

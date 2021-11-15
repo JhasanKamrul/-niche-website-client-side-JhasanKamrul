@@ -12,14 +12,14 @@ import { Pending } from '@mui/icons-material';
 const ManageAllOrders = () => {
     const [manageAll, setManageAll] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/manageAllOrders')
+        fetch('https://powerful-plateau-32116.herokuapp.com/manageAllOrders')
             .then(res => res.json())
             .then(data => setManageAll(data))
     }, [manageAll])
     const handleDelete = id => {
         const proceed = window.confirm('Are You Sure You Want to delete');
         if (proceed) {
-            const url = `http://localhost:5000/manageAllorders/${id}`;
+            const url = `https://powerful-plateau-32116.herokuapp.com/manageAllorders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

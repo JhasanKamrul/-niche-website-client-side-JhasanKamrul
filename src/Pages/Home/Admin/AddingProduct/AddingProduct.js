@@ -18,7 +18,7 @@ const AddingProduct = () => {
         const addedProductInfo = {
             ...addedProduct
         }
-        fetch('http://localhost:5000/addproduct', {
+        fetch('https://powerful-plateau-32116.herokuapp.com/addproduct', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

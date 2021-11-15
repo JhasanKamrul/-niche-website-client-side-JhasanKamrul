@@ -10,7 +10,7 @@ import { Box } from '@mui/system';
 const ExploreAll = () => {
     const [allServices, setAllServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/allproducts')
+        fetch('https://powerful-plateau-32116.herokuapp.com/allproducts')
             .then(res => res.json())
             .then(data => {
                 setAllServices(data);

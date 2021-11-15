@@ -1,5 +1,5 @@
 import { Button, CardActionArea, CardContent, CardMedia, Container, Grid, Typography } from '@material-ui/core';
-import { CloudDone } from '@material-ui/icons';
+
 import { Card, CardActions, Paper, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
@@ -11,7 +11,7 @@ const SingleDetails = () => {
     const [bookService, setBookService] = useState({});
     const [consumerInfo, setConsumerInfo] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/singledetails/${serviceId}`)
+        fetch(`https://powerful-plateau-32116.herokuapp.com/singledetails/${serviceId}`)
             .then(res => res.json())
             .then(data => setBookService(data))
     }, [bookService])
@@ -32,7 +32,7 @@ const SingleDetails = () => {
             image: bookService.img
         }
         console.log(bookingInfo);
-        fetch('http://localhost:5000/addNewConsumer', {
+        fetch('https://powerful-plateau-32116.herokuapp.com/addNewConsumer', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -19,7 +19,7 @@ const AllReview = () => {
         5: "Excellent+"
     };
     useEffect(() => {
-        fetch('http://localhost:5000/allfeedback')
+        fetch('https://powerful-plateau-32116.herokuapp.com/allfeedback')
             .then(res => res.json())
             .then(data => {
                 setAllReview(data);

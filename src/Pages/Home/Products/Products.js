@@ -5,7 +5,7 @@ import SingleProduct from '../SingleProduct/SingleProduct';
 const Products = () => {
     const [allProducts, setAllProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/homeProducts')
+        fetch('https://powerful-plateau-32116.herokuapp.com/homeProducts')
             .then(res => res.json())
             .then(data => {
                 setAllProducts(data);

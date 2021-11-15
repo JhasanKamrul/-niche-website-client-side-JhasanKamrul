@@ -8,7 +8,7 @@ const MyOrders = () => {
     const { userEmail } = useParams();
     const [myOrders, setMyOrders] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/dashboard/myorders/${userEmail}`)
+        fetch(`https://powerful-plateau-32116.herokuapp.com/dashboard/myorders/${userEmail}`)
             .then(res => res.json())
             .then(result => {
                 setMyOrders(result)
@@ -17,7 +17,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are You Sure You Want to delete');
         if (proceed) {
-            const url = `http://localhost:5000/dashoard/myorders/${id}`;
+            const url = `https://powerful-plateau-32116.herokuapp.com/dashoard/myorders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
