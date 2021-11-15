@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.banner{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
+.banner img{
+    height: 650px;
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.banner-container .content {
+    position: absolute;
+    z-index: 999;
+    margin:0 auto;
+    left: 0;
+    font-size: 20px;
+    right: 0;
+    top:70%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 50%;
+    color: rgb(255, 255, 255);
+}
+@media only screen and (min-width: 480px) {
+  .content{
+      font-size: 5px;
+  }
+  }
